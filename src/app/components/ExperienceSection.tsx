@@ -1,3 +1,6 @@
+import H2Title from "./H2Title";
+import SectionWrapper from "./SectionWrapper";
+
 const ExperienceSection = () => {
   const experiences = [
     { id: 1, role: "Legal Assistant - CA", years: "2022 - 2024" },
@@ -7,11 +10,8 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section
-      id="experience"
-      className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-100"
-    >
-      <h2 className="text-3xl font-bold text-center mb-8">Experience</h2>
+    <SectionWrapper id="experience">
+      <H2Title titleLabel={"Experience"} />
       <div className="flex flex-wrap justify-center gap-8">
         {experiences.map((experience) => (
           <div
@@ -23,7 +23,7 @@ const ExperienceSection = () => {
           </div>
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionWrapper from "./SectionWrapper";
+import H2Title from "./H2Title";
 
 const ProjectsSection = () => {
   const projects = [
@@ -12,8 +14,8 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+    <SectionWrapper id="projects" >
+       <H2Title titleLabel={"Projects"} />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div key={project.id} className="project">
@@ -29,7 +31,7 @@ const ProjectsSection = () => {
           </div>
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

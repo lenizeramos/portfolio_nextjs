@@ -28,7 +28,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-[#0b0b0b] shadow-md fixed top-0 w-full z-20 border-b border-gray-700">
+    <nav className="bg-background shadow-md fixed top-0 w-full z-20 border-b border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link href="/">
@@ -45,7 +45,9 @@ function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[#ff007f] hover:text-white transition-colors ${pathname === link.href ? "font-bold" : ""}`}
+                className={`text-primaryColor hover:text-foreground transition-colors ${
+                  pathname === link.href ? "font-bold" : ""
+                }`}
                 aria-current={pathname === link.href ? "page" : undefined}
                 onClick={closeMenu}
               >
@@ -55,7 +57,7 @@ function Navbar() {
           </div>
 
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-foreground"
             onClick={handleMenuToggle}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -66,7 +68,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`md:hidden bg-[#ff007f] p-4 flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform ${
+        className={`md:hidden bg-background p-4 flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform ${
           isOpen
             ? "max-h-screen opacity-100 translate-y-0"
             : "max-h-0 opacity-0 translate-y-5"
@@ -76,7 +78,7 @@ function Navbar() {
           <Link
             key={link.href}
             href={link.href}
-            className="text-gray-300 hover:text-white transition-colors"
+            className="text-gray-300 hover:text-foreground transition-colors"
             onClick={closeMenu}
           >
             {link.name}

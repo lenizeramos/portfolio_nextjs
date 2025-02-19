@@ -1,25 +1,51 @@
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
+import SectionWrapper from "./SectionWrapper";
+import H2Title from "./H2Title";
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className: string;
+  objectFit: "cover" | "contain" | "fill" | "none" | "scale-down";
+}
+
+const CustomImage: React.FC<ImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  objectFit,
+}) => (
+  <div className="w-full p-4">
+    <Image
+      className={className}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      objectFit={objectFit}
+    />
+  </div>
+);
 
 const AboutSection: React.FC = () => {
   return (
-    <section
-      id="about"
-      className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-100"
-    >
-      <h2 className="text-3xl font-bold mb-6">About Me</h2>
+    <SectionWrapper id="about">
+      <H2Title titleLabel={"About Me"} />
 
       <div className="flex flex-wrap mb-8">
-        <div className="w-full md:w-1/2 p-4">
-          <Image
-            className="main-picture"
-            src="/images/main_picture.JPG"
-            alt="Main picture"
-            width={500}
-            height={500}
-            objectFit="cover"
-          />
-        </div>
+        <CustomImage
+          src="/images/main_picture.JPG"
+          alt="Main picture"
+          width={500}
+          height={500}
+          className="main-picture"
+          objectFit="cover"
+        />
 
         <div className="w-full md:w-1/2 p-4">
           <picture className="text-about">
@@ -41,48 +67,40 @@ const AboutSection: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        <div className="w-full">
-          <Image
-            className="second-picture"
-            src="/images/moraine_lake.jpg"
-            alt="Second picture"
-            width={500}
-            height={500}
-            objectFit="cover"
-          />
-        </div>
-        <div className="w-full">
-          <Image
-            className="third-picture"
-            src="/images/paris.jpg"
-            alt="Third picture"
-            width={500}
-            height={500}
-            objectFit="cover"
-          />
-        </div>
-        <div className="w-full">
-          <Image
-            className="fourth-picture"
-            src="/images/ny.jpg"
-            alt="Fourth picture"
-            width={500}
-            height={500}
-            objectFit="cover"
-          />
-        </div>
-        <div className="w-full">
-          <Image
-            className="fifth-picture"
-            src="/images/las_vegas.jpg"
-            alt="Fifth picture"
-            width={500}
-            height={500}
-            objectFit="cover"
-          />
-        </div>
+        <CustomImage
+          src="/images/moraine_lake.jpg"
+          alt="Moraine Lake"
+          width={500}
+          height={500}
+          className="second-picture"
+          objectFit="cover"
+        />
+        <CustomImage
+          src="/images/paris.jpg"
+          alt="Paris"
+          width={500}
+          height={500}
+          className="third-picture"
+          objectFit="cover"
+        />
+        <CustomImage
+          src="/images/ny.jpg"
+          alt="New York"
+          width={500}
+          height={500}
+          className="fourth-picture"
+          objectFit="cover"
+        />
+        <CustomImage
+          src="/images/las_vegas.jpg"
+          alt="Las Vegas"
+          width={500}
+          height={500}
+          className="fifth-picture"
+          objectFit="cover"
+        />
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 
