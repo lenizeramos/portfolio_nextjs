@@ -36,7 +36,7 @@ const SkillsSection = () => {
       <div className="flex flex-wrap justify-center gap-8">
         {skills.map((skill) => (
           <div key={skill.id} className="icon-skill text-center">
-            <div className="font-semibold">{skill.name}</div>
+            <div className="font-semibold text-foreground">{skill.name}</div>
             <Image
               src={skill.imgSrc}
               alt={skill.alt}

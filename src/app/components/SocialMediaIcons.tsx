@@ -1,11 +1,9 @@
 import React from "react";
-//import { AiFillInstagram } from "react-icons/ai";
-//import { FaFacebookF, FaLinkedinIn, FaTwitter, FaGithub  } from "react-icons/fa";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import Link from "next/link";
 
-const className = "text-white hover:text-gray-400 cursor-pointer";
+const className = "text-foreground hover:text-primaryColor cursor-pointer text-2xl";
 
 const SocialMediaIcons: React.FC = () => {
   const contacts = [

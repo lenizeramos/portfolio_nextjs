@@ -47,7 +47,7 @@ const AboutSection: React.FC = () => {
           objectFit="cover"
         />
 
-        <div className="w-full md:w-1/2 p-4">
+        <div className=" md:w-1/2 p-4">
           <picture className="text-about">
             <source
               media="(max-width: 600px)"
