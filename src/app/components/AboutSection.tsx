@@ -20,16 +20,14 @@ const CustomImage: React.FC<ImageProps> = ({
   className,
   objectFit,
 }) => (
-  <div className="w-full p-4">
-    <Image
-      className={className}
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      objectFit={objectFit}
-    />
-  </div>
+  <Image
+    className={className}
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    objectFit={objectFit}
+  />
 );
 
 const AboutSection: React.FC = () => {
@@ -41,13 +39,13 @@ const AboutSection: React.FC = () => {
         <CustomImage
           src="/images/main_picture.JPG"
           alt="Main picture"
-          width={500}
+          width={400}
           height={500}
-          className="main-picture"
+          className={`main-picture border-8 border-foreground`}
           objectFit="cover"
         />
 
-        <div className=" md:w-1/2 p-4">
+        <div className="transform rotate-12 origin-center">
           <picture className="text-about">
             <source
               media="(max-width: 600px)"
@@ -58,7 +56,7 @@ const AboutSection: React.FC = () => {
               className="text"
               src="/images/about_desktop.png"
               alt="Text about me"
-              width={500}
+              width={400}
               height={500}
               objectFit="cover"
             />
@@ -66,37 +64,37 @@ const AboutSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="flex flex-wrap gap-4 justify-center items-center">
         <CustomImage
           src="/images/moraine_lake.jpg"
           alt="Moraine Lake"
-          width={500}
+          width={200}
           height={500}
-          className="second-picture"
+          className="second-picture transform -rotate-12 origin-center border-8 border-foreground"
           objectFit="cover"
         />
         <CustomImage
           src="/images/paris.jpg"
           alt="Paris"
-          width={500}
+          width={200}
           height={500}
-          className="third-picture"
+          className="third-picture transform rotate-0 origin-center border-8 border-foreground"
           objectFit="cover"
         />
         <CustomImage
           src="/images/ny.jpg"
           alt="New York"
-          width={500}
+          width={200}
           height={500}
-          className="fourth-picture"
+          className="fourth-picture transform rotate-12 origin-center border-8 border-foreground"
           objectFit="cover"
         />
         <CustomImage
           src="/images/las_vegas.jpg"
           alt="Las Vegas"
-          width={500}
+          width={200}
           height={500}
-          className="fifth-picture"
+          className="fifth-picture transform -rotate-12 origin-center border-8 border-foreground"
           objectFit="cover"
         />
       </div>
