@@ -35,7 +35,7 @@ const CustomImage: React.FC<ImageProps> = ({
 const AboutSection: React.FC = () => {
   return (
     <SectionWrapper id="about">
-      <H2Title titleLabel={"About Me"} />
+      <H2Title titleLabel={"About me"} />
 
       <div className="flex flex-wrap mb-8">
         <CustomImage
