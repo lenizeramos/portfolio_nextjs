@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import SocialMediaIcons from "./SocialMediaIcons";
+import { TypeAnimation } from "react-type-animation";
 
 const HomeSection: React.FC = () => {
   return (
@@ -20,7 +22,14 @@ const HomeSection: React.FC = () => {
       <div className="text-center md:text-left flex flex-col gap-2">
         <div>
           <p className="text-5xl font-bold text-foreground">Leni Ramos</p>
-          <p className="text-3xl text-primaryColor">Web Developer</p>
+          <div className="text-3xl text-primaryColor">
+            <TypeAnimation
+              sequence={["Web Developer", 1000, "Mobile Developer", 1000]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </div>
         </div>
 
         <div className="flex justify-center mt-4">
