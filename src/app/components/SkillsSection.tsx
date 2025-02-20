@@ -12,15 +12,44 @@ const SkillsSection = () => {
       imgSrc: "/images/js.png",
       alt: "JavaScript Icon",
     },
-    { id: 4, name: "Git", imgSrc: "/images/git.png", alt: "Git Icon" },
+    {
+      id: 4,
+      name: "TypeScript",
+      imgSrc: "/images/ts.png",
+      alt: "TypeScript Icon",
+    },
+
     {
       id: 5,
+      name: "Tailwind",
+      imgSrc: "/images/tailwind.png",
+      alt: "Tailwind Icon",
+    },
+    { id: 6, name: "Sass", imgSrc: "/images/sass.png", alt: "Sass Icon" },
+    { id: 7, name: "React", imgSrc: "/images/react.png", alt: "React Icon" },
+    { id: 8, name: "NextJS", imgSrc: "/images/nextjs.svg", alt: "NextJS Icon" },
+    { id: 9, name: "mySQL", imgSrc: "/images/mySQL.png", alt: "mySQL Icon" },
+    {
+      id: 10,
+      name: "MongoDB",
+      imgSrc: "/images/mongoDB.png",
+      alt: "MongoDB Icon",
+    },
+    { id: 11, name: "Git", imgSrc: "/images/git.png", alt: "Git Icon" },
+    {
+      id: 12,
+      name: "GitHub",
+      imgSrc: "/images/github.svg",
+      alt: "GitHub Icon",
+    },
+    {
+      id: 13,
       name: "Communicative",
       imgSrc: "/images/sound.png",
       alt: "Communicative Icon",
     },
     {
-      id: 6,
+      id: 14,
       name: "Open-Minded",
       imgSrc: "/images/mind.png",
       alt: "Open-Minded Icon",
@@ -28,9 +57,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <SectionWrapper
-      id="skills"
-    >
+    <SectionWrapper id="skills">
       <H2Title titleLabel={"Skills"} />
 
       <div className="flex flex-wrap justify-center gap-8">
