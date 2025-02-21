@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       id: 2,
       imgSrc: "/images/portfolio.png",
       alt: "Portfolio",
-      href: "https://github.com/lenizeramos",
+      href: "https://portfolio-nextjs-lyart-nine.vercel.app/",
       title: "Portfolio",
     },
     {
