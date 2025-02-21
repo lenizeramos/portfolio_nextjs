@@ -26,7 +26,7 @@ const CustomImage: React.FC<ImageProps> = ({
     alt={alt}
     width={width}
     height={height}
-    objectFit={objectFit}
+    style={{ objectFit }}
   />
 );
 
@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
               alt="Text about me"
               width={400}
               height={500}
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
             />
           </picture>
         </div>

@@ -60,7 +60,7 @@ const SkillsSection = () => {
     <SectionWrapper id="skills">
       <H2Title titleLabel={"Skills"} />
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="lg:w-[50%] flex flex-wrap justify-center gap-8">
         {skills.map((skill) => (
           <div key={skill.id} className="icon-skill text-center">
             <div className="font-semibold text-foreground">{skill.name}</div>

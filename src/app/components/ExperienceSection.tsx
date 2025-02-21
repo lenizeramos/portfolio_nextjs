@@ -12,7 +12,7 @@ const ExperienceSection = () => {
   return (
     <SectionWrapper id="experience">
       <H2Title titleLabel={"Experience"} />
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center items-center gap-8">
         {experiences.map((experience) => (
           <div
             key={experience.id}
