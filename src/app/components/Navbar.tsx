@@ -72,7 +72,7 @@ function Navbar() {
           isOpen
             ? "max-h-screen opacity-100 translate-y-0"
             : "max-h-0 opacity-0 translate-y-5"
-        } overflow-hidden`}
+        } overflow-hidden pb-4`}
       >
         {navLinks.map((link) => (
           <Link
