@@ -18,9 +18,9 @@ const AnimatedBackground: React.FC = () => {
     const points = Array.from({ length: 1000 }).map(() => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      radius: Math.random() * 3 + 3,
-      dx: (Math.random() - 0.5) * 3,
-      dy: (Math.random() - 0.5) * 3,
+      radius: Math.random() * 3 + 2,
+      dx: (Math.random() - 0.5) * 1,
+      dy: (Math.random() - 0.5) * 1,
     }));
 
     const animate = () => {
