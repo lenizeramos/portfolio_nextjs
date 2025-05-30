@@ -9,21 +9,21 @@ const SocialMediaIcons: React.FC = () => {
   const contacts = [
     {
       id: 1,
-      href: "https://github.com/lenizeramos",
+      href: process.env.NEXT_PUBLIC_GITHUB_URL,
       ariaLabel: "GitHub icon",
       title: "GitHub",
       Icon: FaGithub,
     },
     {
       id: 2,
-      href: "https://www.linkedin.com/in/x",
+      href: process.env.NEXT_PUBLIC_LINKEDIN_URL,
       ariaLabel: "LinkedIn icon",
       title: "LinkedIn",
       Icon: FaLinkedinIn,
     },
     {
       id: 3,
-      href: "mailto:x",
+      href: process.env.NEXT_PUBLIC_EMAIL,
       ariaLabel: "Email icon",
       title: "Email",
       Icon: IoMail,
@@ -34,7 +34,7 @@ const SocialMediaIcons: React.FC = () => {
       {contacts.map((contact) => (
         <Link
           key={contact.id}
-          href={contact.href}
+          href={contact.href ?? "#"}
           title={contact.title}
           aria-label={contact.ariaLabel}
           className={className}
