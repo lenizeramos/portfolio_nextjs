@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import SectionWrapper from "./SectionWrapper";
 import H2Title from "./H2Title";
-import { Link as LinkIcon } from 'lucide-react';
+import { Link as LinkIcon } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -56,20 +55,26 @@ const ProjectsSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div key={project.id} className="project">
-            <Link href={project.href}>
-              <div className="relative w-96 h-96 overflow-hidden rounded-lg shadow-lg">
-                <Image
-                  src={project.imgSrc}
-                  alt={project.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-                <p className="absolute bottom-0 left-0 right-0 text-2xl font-semibold text-white text-center bg-black bg-opacity-70 p-2 flex justify-center items-center gap-2">
-                  {project.title}<LinkIcon  className="w-5 h-5" />
-                </p>
-              </div>
-            </Link>
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-96 h-96 overflow-hidden rounded-lg shadow-lg"
+              title={project.title}
+              aria-label={project.title}
+            >
+              <Image
+                src={project.imgSrc}
+                alt={project.alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+              <p className="absolute bottom-0 left-0 right-0 text-2xl font-semibold text-white text-center bg-black bg-opacity-70 p-2 flex justify-center items-center gap-2">
+                {project.title}
+                <LinkIcon className="w-5 h-5" />
+              </p>
+            </a>
           </div>
         ))}
       </div>

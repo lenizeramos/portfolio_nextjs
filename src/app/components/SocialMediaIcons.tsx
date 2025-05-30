@@ -1,7 +1,6 @@
 import React from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import Link from "next/link";
 
 const className = "text-foreground hover:text-primaryColor cursor-pointer text-2xl";
 
@@ -32,15 +31,17 @@ const SocialMediaIcons: React.FC = () => {
   return (
     <div className="flex gap-3 justify-center sm:justify-start">
       {contacts.map((contact) => (
-        <Link
+        <a
           key={contact.id}
           href={contact.href ?? "#"}
+          target="_blank"
+          rel="noopener noreferrer"
           title={contact.title}
           aria-label={contact.ariaLabel}
           className={className}
         >
           <contact.Icon />
-        </Link>
+        </a>
       ))}
     </div>
   );
