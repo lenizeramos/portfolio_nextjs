@@ -8,21 +8,21 @@ const SocialMediaIcons: React.FC = () => {
   const contacts = [
     {
       id: 1,
-      href: process.env.NEXT_PUBLIC_GITHUB_URL,
+      href: "https://github.com/lenizeramos",
       ariaLabel: "GitHub icon",
       title: "GitHub",
       Icon: FaGithub,
     },
     {
       id: 2,
-      href: process.env.NEXT_PUBLIC_LINKEDIN_URL,
+      href: "https://www.linkedin.com/in/lenizeramos",
       ariaLabel: "LinkedIn icon",
       title: "LinkedIn",
       Icon: FaLinkedinIn,
     },
     {
       id: 3,
-      href: process.env.NEXT_PUBLIC_EMAIL,
+      href: "mailto:lenizemr@gmail.com",
       ariaLabel: "Email icon",
       title: "Email",
       Icon: IoMail,
