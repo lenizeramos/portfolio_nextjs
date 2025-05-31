@@ -55,7 +55,7 @@ const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">
       <H2Title titleLabel={"Projects"} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center px-4">
         {projects.map((project) => (
           <motion.div
             key={project.id}
@@ -67,17 +67,18 @@ const ProjectsSection = () => {
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative block w-96 h-96 overflow-hidden rounded-lg shadow-lg"
+              className="relative block w-full max-w-xs h-80 aspect-square overflow-hidden rounded-lg shadow-lg"
               title={project.title}
               aria-label={project.title}
             >
-              <Image
+              <div className="relative w-full h-full"> <Image
                 src={project.imgSrc}
                 alt={project.alt}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-lg"
-              />
+              /></div>
+             
               <p className="absolute bottom-0 left-0 right-0 text-2xl font-semibold text-white text-center bg-black bg-opacity-70 p-2 flex justify-center items-center gap-2">
                 {project.title}
                 <LinkIcon className="w-5 h-5" />
