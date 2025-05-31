@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
 import H2Title from "./H2Title";
 import { Link as LinkIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ProjectsSection = () => {
   const projects = [
@@ -54,7 +57,12 @@ const ProjectsSection = () => {
       <H2Title titleLabel={"Projects"} />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-          <div key={project.id} className="project">
+          <motion.div
+            key={project.id}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 50 }}
+            className="project"
+          >
             <a
               href={project.href}
               target="_blank"
@@ -75,7 +83,7 @@ const ProjectsSection = () => {
                 <LinkIcon className="w-5 h-5" />
               </p>
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
     </SectionWrapper>
